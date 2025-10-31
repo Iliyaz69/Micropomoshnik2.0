@@ -1,0 +1,179 @@
+/*
+  styles.css
+  Минималистичный стиль:
+  - Цвета: зеленый (#2ECC71), черный (#1A1A1A), серый (#757575), белый (#FFFFFF)
+  - Акценты: тени и плавные переходы
+  - Чистая типографика
+*/
+
+:root {
+  --accent-green: #2ECC71;
+  --accent-green-hover: #27AE60;
+  --text-dark: #1A1A1A;
+  --text-gray: #757575;
+  --bg-white: #FFFFFF;
+  --bg-light: #F8F9FA;
+  --border-light: rgba(0, 0, 0, 0.1);
+}
+
+/* Базовые стили */
+body {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+/* Навигация */
+.navbar {
+  background: var(--bg-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.navbar-brand {
+  color: var(--accent-green) !important;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.nav-link {
+  color: var(--text-dark) !important;
+  font-weight: 500;
+  padding: 0.7rem 1.2rem !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-green) !important;
+}
+
+/* Карточки */
+.app-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 600px;
+  width: 92vw;
+}
+
+.app-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Заголовки */
+.card-title {
+  color: var(--text-dark);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+/* Кнопки */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn-success {
+  background: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background: var(--accent-green-hover);
+  border-color: var(--accent-green-hover);
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+  color: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+.btn-outline-primary:hover {
+  background: var(--accent-green);
+  border-color: var(--accent-green);
+  transform: translateY(-1px);
+}
+
+/* Прогресс */
+.progress {
+  background: var(--bg-light);
+  border-radius: 8px;
+  height: 10px !important;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: var(--accent-green);
+  transition: width 0.4s ease;
+}
+
+/* Блок задачи */
+#task-area {
+  background: linear-gradient(to bottom right, rgba(46, 204, 113, 0.03), rgba(46, 204, 113, 0.06));
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+#task-text {
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Друзья */
+.table {
+  margin: 0;
+}
+
+.table th {
+  border-top: none;
+  color: var(--text-gray);
+  font-weight: 500;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.friend-highlight {
+  background: linear-gradient(to right, rgba(46, 204, 113, 0.08), transparent);
+  border-left: 3px solid var(--accent-green);
+}
+
+/* Footer */
+footer {
+  background: var(--bg-white);
+  border-top: 1px solid var(--border-light);
+  color: var(--text-gray);
+  margin-top: auto;
+  padding: 1rem 0;
+}
+
+/* Адаптивность */
+@media (max-width: 576px) {
+  .btn-lg {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+  }
+  
+  #task-text {
+    font-size: 1.1rem;
+  }
+}

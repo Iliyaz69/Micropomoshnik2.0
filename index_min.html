@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Микропомощник по привычкам</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="styles_min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index_min.html">
+                <span class="material-icons align-middle me-1">eco</span>
+                Микропомощник
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index_min.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="friends_min.html">Друзья</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts_min.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container my-5">
+        <div class="app-card mx-auto p-4">
+            <h1 class="card-title mb-4">Ежедневные привычки</h1>
+            
+            <!-- Прогресс -->
+            <div class="mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <small class="text-muted">Прогресс</small>
+                    <span class="badge bg-success" id="progress-percent">0%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" id="progress-bar" role="progressbar" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Текущая задача -->
+            <div id="task-area" class="text-center">
+                <p id="task-text" class="mb-4">Загрузка задачи...</p>
+                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                    <button class="btn btn-success btn-lg" onclick="completeTask()">
+                        <span class="material-icons align-middle me-1">done</span>
+                        Выполнено
+                    </button>
+                    <button class="btn btn-outline-primary btn-lg" onclick="skipTask()">
+                        <span class="material-icons align-middle me-1">skip_next</span>
+                        Пропустить
+                    </button>
+                </div>
+            </div>
+
+            <!-- Статистика -->
+            <div class="row mt-4 text-center g-3">
+                <div class="col-6">
+                    <div class="p-3 border rounded">
+                        <h3 id="completed-count">0</h3>
+                        <small class="text-muted">Выполнено</small>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 border rounded">
+                        <h3 id="streak-count">0</h3>
+                        <small class="text-muted">Серия дней</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <small>Микропомощник по привычкам &copy; 2024</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script_min.js"></script>
+</body>
+</html>
